@@ -2,8 +2,9 @@ require_relative 'my_enumerable'
 
 class MyList
   include MyEnumerable
-  def initialize(list)
-    @list = list
+  def initialize(args)
+    @list = []
+    args.each { |arg| @list << arg }
   end
 
   def each(&block)
